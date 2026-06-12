@@ -18,21 +18,17 @@ const { Content } = await entry.render();
 // 1. Récupération
 const allDocs = await getCollection('docs');
 
-// 2. Configuration de l'ordre des groupes
+// 2. Configuration de l'ordre des groupes (Nettoyé des références IA/Genetics)
 const GROUPS_ORDER = [
   'Général',
-  'WORKFLOW_ENGINE',
+  'KERNEL',
+  'JSON_DB',
   'MODEL_ENGINE',
   'RULES_ENGINE',
-  'AI',
+  'WORKFLOW_ENGINE',
+  'CODE_GENERATOR',
   'TRACEABILITY',
   'PLUGINS',
-  'GENETICS',
-  'CODE_GENERATOR',
-  'JSON_DB',
-  'GRAPH_STORE',
-  'BLOCKCHAIN',
-  'STORAGE',
   'UTILS',
   'COMMANDS',
 ];
@@ -46,7 +42,7 @@ type TreeNode = {
   order: number;
 };
 
-// Map temporaire pour retrouver les noeuds par leur TITRE (ex: "Nlp")
+// Map temporaire pour retrouver les noeuds par leur TITRE
 const nodesByTitle: Record<string, TreeNode> = {};
 const rootNodesByGroup: Record<string, TreeNode[]> = {};
 
@@ -60,8 +56,6 @@ allDocs.forEach((doc) => {
     children: [],
     order: data.order || 0,
   };
-  // On indexe par titre pour que les enfants puissent retrouver leur parent
-  // Attention : Il faut que le titre dans le markdown corresponde au 'sidebar_parent'
   nodesByTitle[data.title] = node;
 });
 
@@ -73,10 +67,8 @@ allDocs.forEach((doc) => {
   const node = nodesByTitle[data.title];
 
   if (parentTitle && nodesByTitle[parentTitle]) {
-    // Si j'ai un parent connu, je m'ajoute à ses enfants
     nodesByTitle[parentTitle].children.push(node);
   } else {
-    // Sinon, je suis une racine de mon groupe
     if (!rootNodesByGroup[group]) rootNodesByGroup[group] = [];
     rootNodesByGroup[group].push(node);
   }
@@ -94,8 +86,9 @@ const sortedGroups = Object.keys(rootNodesByGroup).sort((a, b) => {
 
 const sortNodes = (nodes: TreeNode[]) => {
   nodes.sort((a, b) => a.title.localeCompare(b.title));
-  nodes.forEach((n) => sortNodes(n.children)); // Tri récursif
+  nodes.forEach((n) => sortNodes(n.children)); 
 };
+
 Object.values(rootNodesByGroup).forEach((groupNodes) => sortNodes(groupNodes));
 
 // Helper style
@@ -112,7 +105,7 @@ const getLinkClass = (docSlug: string, currentSlug: string, level: number) => {
 <!doctype html>
 <html lang="fr" class="scroll-smooth">
   <head>
-    <BaseHead title={`${entry.data.title} | Documentation`} description="Doc" />
+    <BaseHead title={`${entry.data.title} | Documentation`} description="Documentation R.A.I.S.E. Open Core" />
   </head>
   <body class="bg-slate-50 text-slate-900 font-sans antialiased">
     <Header />
@@ -124,7 +117,7 @@ const getLinkClass = (docSlug: string, currentSlug: string, level: number) => {
           class="sticky top-32 max-h-[80vh] overflow-y-auto pr-2 custom-scrollbar"
         >
           <h3 class="font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs">
-            Menu Documentation
+            Documentation Core
           </h3>
 
           {

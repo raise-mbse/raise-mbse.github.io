@@ -5,78 +5,75 @@ import Footer from '../components/Footer.astro';
 
 const title = 'Roadmap & Stratégie | R.A.I.S.E.';
 const description =
-  "De l'Alpha au MVP en 6 mois. Planning d'exécution, jalons techniques et gestion des risques.";
+  "De l'Open Core au MVP Industriel en 6 mois. Planning d'exécution, jalons techniques et matrice des risques.";
 
 const phases = [
   {
     period: 'Mois 1-2',
-    name: 'Phase 1 : Fondations',
+    name: 'Phase 1 : Fondations Core & Persistance',
     status: 'En cours',
-    desc: 'Stabilisation du Kernel Rust et de la persistance ACID.',
-    agent_task: 'Génération des structs Rust & Tests Unitaires.',
-    milestones: ['API JSON-DB', 'Trait Mediator', 'Sandbox Wasm'],
+    desc: 'Stabilisation du micro-noyau asynchrone Rust et du moteur de persistance locale ACID.',
+    agent_task: 'Implémentation du système de handles explicites et validation stricte des schémas d\'ingestion.',
+    milestones: ['Moteur json_db', 'Résolution des Handles', 'Micro-kernel asynchrone'],
     kpis: [
-      { label: 'Test Coverage', value: '> 90%' },
-      { label: 'Latence Write', value: '< 50µs' },
       { label: 'Unsafe Blocks', value: '0' },
+      { label: 'Latence Write', value: '< 50µs' },
+      { label: 'Intégrité Référentielle', value: '100%' },
     ],
   },
   {
     period: 'Mois 3-4',
-    name: 'Phase 2 : Cognition',
+    name: 'Phase 2 : Abstraction MBSE & Extension',
     status: 'Planifié',
-    desc: 'Intégration du moteur vectoriel SurrealDB et du RAG Local.',
-    agent_task: 'Optimisation des embeddings & Validation croisée.',
-    milestones: ['Moteur SurrealDB', 'Connecteur Vector', 'RAG Pipeline'],
+    desc: 'Modélisation des structures pivots de l\'ingénierie système (SysML v2, RAMI 4.0, Arcadia) et intégration de la couche d\'extension.',
+    agent_task: 'Déploiement du runtime WebAssembly pour l\'isolation des plugins et génération automatique d\'AST Rust.',
+    milestones: ['Moteur model_engine', 'Sandbox WebAssembly', 'Générateur d\'AST'],
     kpis: [
-      { label: 'Compression', value: '-95%' },
-      { label: 'Recall @10', value: '> 85%' },
-      { label: 'Inference CPU', value: '< 200ms' },
+      { label: 'Conformité SysML', value: 'v2 Native' },
+      { label: 'Isolation Sandbox', value: 'Hermétique' },
+      { label: 'Temps Génération', value: '< 150ms' },
     ],
   },
   {
     period: 'Mois 5-6',
-    name: 'Phase 3 : Industrialisation',
+    name: 'Phase 3 : Écosystème & Déploiement',
     status: 'Planifié',
-    desc: 'Packaging Tauri, Signature binaire et Audit de sécurité.',
-    agent_task: 'Simulation de charge & Pentest automatisé.',
-    milestones: ['Release v1.0', 'Signature Ed25519', 'Audit Externe'],
+    desc: 'Finalisation des interfaces utilisateur et des outils d\'automatisation et d\'intégration DevSecOps.',
+    agent_task: 'Packaging applicatif avec Tauri, développement du pilote CLI et automatisation contextuelle des sessions.',
+    milestones: ['App raise-desktop', 'Outil raise-cli', 'Signature Binaire Ed25519'],
     kpis: [
-      { label: 'Binary Size', value: '< 80MB' },
-      { label: 'Cold Start', value: '< 300ms' },
-      { label: 'Install Time', value: '< 1min' },
+      { label: 'Taille Binaire', value: '< 45Mo' },
+      { label: 'Fallback Contextuel', value: 'Automatique' },
+      { label: 'Dette Technique', value: '0' },
     ],
   },
 ];
 
-// DATA : MATRICE DES RISQUES
+// DATA : MATRICE DES RISQUES REVISITÉE
 const risks = [
   {
     id: 1,
-    challenge: "Le risque d'Hallucination",
-    context: 'Les LLMs inventent des faits plausibles mais faux.',
-    mitigation: 'Architecture de Vote',
-    details:
-      'Le moteur Rust rejette toute proposition du LLM qui ne passe pas le seuil de consensus (Condorcet). Si doute = Silence.',
-    icon: '👻',
+    challenge: "Corruption des relations de modèles",
+    context: "La manipulation de graphes industriels denses entraîne un risque d'incohérence de clés ou d'identifiants.",
+    mitigation: "Système de Handles Explicites",
+    details: "Abandon complet des identifiants internes classiques au profit de handles explicites et typés. Les arguments de schémas sont obligatoires à l'ingestion, garantissant une intégrité référentielle absolue de bout en bout.",
+    icon: '🔗',
   },
   {
     id: 2,
-    challenge: "La Latence d'Inférence",
-    context: "L'IA locale peut être lente sur CPU standard.",
-    mitigation: 'Zero-Copy & Rust',
-    details:
-      "Pas de Garbage Collector. Utilisation de SurrealDB (Rust native) pour éviter l'overhead Python/Torch. Optimisation SIMD (Single Instruction, Multiple Data).",
-    icon: '🐢',
+    challenge: "Fuite d'artefacts en production",
+    context: "L'inclusion accidentelle de code de laboratoire ou de simulation altère la sûreté logicielle en environnement industriel.",
+    mitigation: "Dogme de Pureté de l'AST",
+    details: "Politique stricte de tolérance zéro : absolument aucune condition de test n'est injectée ni tolérée dans le code de production. L'arbre de syntaxe est audité à la compilation pour un runtime industriel pur.",
+    icon: '🛡️',
   },
   {
     id: 3,
-    challenge: 'La Dette Technique',
-    context: "L'hybridation complexifie la maintenance.",
-    mitigation: 'Typage Fort & Schéma',
-    details:
-      'Tout est typé strictement (Rust). Le compilateur bloque les erreurs logiques. JSON-LD garantit la structure des données.',
-    icon: '🏗️',
+    challenge: "Exécution dégradée en zone isolée",
+    context: "L'absence d'accès réseau (Air-Gap) complexifie les lignes de commande si les configurations de domaines ne sont pas saisies.",
+    mitigation: "Fallback Contextuel Dynamique",
+    details: "L'outil raise-cli intègre une intelligence de contexte : si les arguments --domain ou --db ne sont pas spécifiés, il se rabat automatiquement sur le current_domain et le current_db de la session active.",
+    icon: '⚡',
   },
 ];
 ---
@@ -92,24 +89,21 @@ const risks = [
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
       <div class="text-center mb-20 animate-fade-in">
         <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded border border-amber-200 bg-amber-50 text-amber-900 text-[10px] font-mono uppercase tracking-widest mb-6"
+          class="inline-flex items-center gap-2 px-3 py-1 rounded border border-blue-200 bg-blue-50 text-blue-900 text-[10px] font-mono uppercase tracking-widest mb-6"
         >
-          <span class="text-amber-600 animate-pulse">●</span> Standard de Gouvernance IA | Prototype v0.1.0
+          <span class="text-blue-600 animate-pulse">●</span> Trajectoire Industrielle | Plan de Transition
         </div>
 
         <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
-          Trajectoire vers la <span class="text-rust">v1.0</span>
+          Trajectoire de l'Infrastructure vers la <span class="text-rust">v1.0</span>
         </h1>
         <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-          Nous construisons une infrastructure critique, pas un gadget. Notre roadmap privilégie la <strong
-            >sécurité</strong
-          > et la <strong>stabilité</strong> sur la vitesse de déploiement.
+          Nous bâtissons un actif logiciel souverain pour l'ingénierie critique. Notre planification privilégie la <strong>sûreté formelle</strong> et la <strong>stabilité d'exécution</strong> sur la vitesse de déploiement.
         </p>
       </div>
 
       <div class="relative mb-32">
-        <div class="absolute left-1/2 w-0.5 bg-slate-200 h-full -translate-x-1/2 hidden md:block">
-        </div>
+        <div class="absolute left-1/2 w-0.5 bg-slate-200 h-full -translate-x-1/2 hidden md:block"></div>
 
         <div class="space-y-12">
           {
@@ -139,20 +133,20 @@ const risks = [
                     </div>
 
                     <h3 class="text-2xl font-bold text-slate-900 mb-2">{phase.name}</h3>
-                    <p class="text-slate-600 mb-6">{phase.desc}</p>
+                    <p class="text-slate-600 mb-6 text-sm leading-relaxed">{phase.desc}</p>
 
                     <div class="bg-slate-50 rounded-lg p-4 mb-6 border border-slate-100">
                       <div class="text-[10px] uppercase text-slate-400 font-bold mb-2 flex items-center gap-2">
-                        <span>🤖 Rôle de l'Agent Dev</span>
+                        <span>🎯 Exigence de l'Architecture</span>
                       </div>
-                      <p class="text-sm text-slate-700 italic">"{phase.agent_task}"</p>
+                      <p class="text-xs text-slate-700 italic">"{phase.agent_task}"</p>
                     </div>
 
                     <div class="grid grid-cols-3 gap-4 border-t border-slate-100 pt-4">
                       {phase.kpis.map((kpi) => (
                         <div class="text-center">
-                          <div class="text-lg font-black text-slate-800">{kpi.value}</div>
-                          <div class="text-[9px] uppercase text-slate-400 font-bold">
+                          <div class="text-base font-black text-slate-800">{kpi.value}</div>
+                          <div class="text-[9px] uppercase text-slate-400 font-bold tracking-wide">
                             {kpi.label}
                           </div>
                         </div>
@@ -168,38 +162,37 @@ const risks = [
 
       <section class="mb-24">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-slate-900 mb-4">Transparence sur les Défis</h2>
-          <p class="text-slate-600 max-w-2xl mx-auto">
-            Un projet d'ingénierie complexe comporte des risques. Voici comment notre architecture
-            les adresse nativement.
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">Maîtrise des Risques Logiciels</h2>
+          <p class="text-slate-600 max-w-2xl mx-auto text-sm">
+            Un framework d'ingénierie dirigée par les modèles exige une rigueur absolue. Voici comment notre topologie logicielle élimine nativement les vulnérabilités structurelles.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {
             risks.map((risk) => (
-              <div class="bg-slate-900 rounded-2xl p-8 text-white relative overflow-hidden group">
-                <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl group-hover:scale-125 transition-transform duration-500">
+              <div class="bg-slate-900 rounded-2xl p-8 text-white relative overflow-hidden group border border-slate-800">
+                <div class="absolute top-0 right-0 p-4 opacity-10 text-5xl group-hover:scale-125 transition-transform duration-500">
                   {risk.icon}
                 </div>
 
                 <div class="relative z-10">
                   <div class="text-rust font-bold text-xs uppercase tracking-widest mb-2">
-                    Défi #{risk.id}
+                    Contrainte #{risk.id}
                   </div>
-                  <h3 class="text-xl font-bold mb-2">{risk.challenge}</h3>
-                  <p class="text-slate-400 text-sm mb-6 border-l-2 border-slate-700 pl-3">
+                  <h3 class="text-xl font-bold mb-2 text-slate-100">{risk.challenge}</h3>
+                  <p class="text-slate-400 text-xs mb-6 border-l-2 border-slate-700 pl-3 leading-relaxed">
                     {risk.context}
                   </p>
 
-                  <div class="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
+                  <div class="bg-white/5 rounded-lg p-4 backdrop-blur-sm border border-white/10">
                     <div class="flex items-center gap-2 mb-2">
-                      <span class="text-green-400 text-lg">✓</span>
-                      <span class="font-bold text-sm text-green-100">
+                      <span class="text-green-400 text-sm">✓</span>
+                      <span class="font-bold text-xs text-green-100">
                         Réponse : {risk.mitigation}
                       </span>
                     </div>
-                    <p class="text-xs text-slate-300 leading-relaxed">{risk.details}</p>
+                    <p class="text-[11px] text-slate-300 leading-relaxed">{risk.details}</p>
                   </div>
                 </div>
               </div>
@@ -208,28 +201,25 @@ const risks = [
         </div>
       </section>
 
-      <section
-        class="bg-white border border-slate-200 rounded-[3rem] p-8 md:p-12 text-center shadow-xl"
-      >
+      <section class="bg-white border border-slate-200 rounded-[3rem] p-8 md:p-12 text-center shadow-xl">
         <div class="max-w-3xl mx-auto">
-          <h3 class="text-3xl font-bold text-slate-900 mb-6">Objectif : Zero "Vaporware"</h3>
-          <p class="text-slate-600 mb-8 text-lg">
-            Dans 6 mois, le système R.A.I.S.E. est livré sous forme d'un binaire unique, audité et
-            documenté. Nous cherchons 3 partenaires pour valider la v1.0.
+          <h3 class="text-3xl font-bold text-slate-900 mb-6">Objectif : Zéro "Vaporware"</h3>
+          <p class="text-slate-600 mb-8 text-base leading-relaxed">
+            Le système R.A.I.S.E. est conçu comme un binaire unique standalone, auditable et prêt pour l'intégration continue en environnement de production fermé.
           </p>
 
           <div class="flex flex-col sm:flex-row justify-center gap-6 mb-8">
-            <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-100">
+            <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-100 flex-1">
               <div class="text-2xl font-bold text-slate-900">100%</div>
-              <div class="text-xs uppercase text-slate-500 font-bold">On-Premise</div>
+              <div class="text-xs uppercase text-slate-500 font-bold tracking-wider mt-1">On-Premise / Air-Gap</div>
             </div>
-            <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-100">
+            <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-100 flex-1">
               <div class="text-2xl font-bold text-rust">Safe</div>
-              <div class="text-xs uppercase text-slate-500 font-bold">Rust Core</div>
+              <div class="text-xs uppercase text-slate-500 font-bold tracking-wider mt-1">Rust Kernel Architecture</div>
             </div>
-            <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-100">
-              <div class="text-2xl font-bold text-slate-900">Open</div>
-              <div class="text-xs uppercase text-slate-500 font-bold">Audit-Ready</div>
+            <div class="bg-slate-50 px-6 py-4 rounded-xl border border-slate-100 flex-1">
+              <div class="text-2xl font-bold text-slate-900">Stable</div>
+              <div class="text-xs uppercase text-slate-500 font-bold tracking-wider mt-1">Audit-Ready Framework</div>
             </div>
           </div>
 
@@ -237,12 +227,13 @@ const risks = [
             href="/pilot"
             class="inline-flex items-center bg-slate-900 hover:bg-rust text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg hover:shadow-xl group gap-2"
           >
-            <span>Devenir Pilote Industriel</span>
+            <span>Engager le Programme Pilote</span>
             <span class="group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
       </section>
     </main>
+
     <Footer />
   </body>
 </html>

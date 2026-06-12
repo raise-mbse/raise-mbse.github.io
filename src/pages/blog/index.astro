@@ -2,10 +2,12 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import { Image } from 'astro:assets';
+
+const description = "Analyses d'architecture, notes de version du framework R.A.I.S.E. et retours d'expérience sur l'ingénierie MBSE 2.0.";
 
 // Récupération des articles triés par date (le plus récent en premier)
 const posts = (await getCollection('blog')).sort(
@@ -16,7 +18,7 @@ const posts = (await getCollection('blog')).sort(
 <!doctype html>
 <html lang="fr" class="scroll-smooth">
   <head>
-    <BaseHead title={`Le Journal | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+    <BaseHead title={`Registre d'Architecture | ${SITE_TITLE}`} description={description} />
   </head>
   <body class="bg-slate-50 text-slate-900 font-sans antialiased">
     <Header />
@@ -26,14 +28,13 @@ const posts = (await getCollection('blog')).sort(
         <div
           class="inline-flex items-center gap-2 px-3 py-1 rounded border border-slate-200 bg-white text-slate-500 text-[10px] font-mono uppercase tracking-widest mb-6 shadow-sm"
         >
-          <span>●</span> Ressources & Actualités
+          <span>●</span> Base de Connaissances & Mises à jour
         </div>
         <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
-          Le <span class="text-rust">Journal</span>
+          Registre <span class="text-rust">d'Architecture</span>
         </h1>
         <p class="text-xl text-slate-600 max-w-2xl mx-auto">
-          Analyses techniques, mises à jour du protocole et réflexions sur la souveraineté
-          numérique.
+          Analyses d'ingénierie, notes de version du noyau R.A.I.S.E. et retours d'expérience sur la souveraineté Air-Gap.
         </p>
       </div>
 
@@ -45,7 +46,7 @@ const posts = (await getCollection('blog')).sort(
                 <a href={`/blog/${post.id}/`} class="block h-full">
                   <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
                     {/* Image de l'article */}
-                    <div class="aspect-video w-full overflow-hidden bg-slate-100 border-b border-slate-100">
+                    <div class="aspect-video w-full overflow-hidden bg-slate-100 border-b border-slate-100 relative">
                       {post.data.heroImage ? (
                         <Image
                           src={post.data.heroImage}
@@ -55,9 +56,9 @@ const posts = (await getCollection('blog')).sort(
                           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       ) : (
-                        /* Placeholder si pas d'image */
-                        <div class="w-full h-full flex items-center justify-center text-slate-300">
-                          <span class="text-4xl">📄</span>
+                        /* Placeholder orienté tech si pas d'image */
+                        <div class="w-full h-full flex items-center justify-center bg-slate-800 text-rust font-mono text-xs opacity-90 group-hover:opacity-100 transition-opacity">
+                          <span>[ R.A.I.S.E. // DOCS ]</span>
                         </div>
                       )}
                     </div>
@@ -75,7 +76,7 @@ const posts = (await getCollection('blog')).sort(
                         {post.data.description}
                       </p>
                       <div class="text-rust text-sm font-bold mt-auto flex items-center gap-1">
-                        Lire l'article <span>→</span>
+                        Lire la publication <span>→</span>
                       </div>
                     </div>
                   </article>

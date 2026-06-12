@@ -18,7 +18,7 @@ Cela couvre tout :
 - Les objets connectés (IoT)
 - Les systèmes industriels (PLC, SCADA)
 - Les logiciels d'entreprise (SaaS, OS)
-- Et bien sûr, les composants IA.
+- Et bien sûr, l'outillage d'ingénierie et de DevSecOps.
 
 L'objectif est simple : garantir que les produits sont sécurisés **dès leur conception** et tout au long de leur cycle de vie (5 ans minimum).
 
@@ -28,7 +28,7 @@ L'objectif est simple : garantir que les produits sont sécurisés **dès leur c
 
 Il ne suffit plus de patcher après coup. Le fabricant doit prouver qu'il a intégré la sécurité dans l'architecture même du produit.
 
-- _L'approche Condorcet :_ C'est exactement pour cela que nous utilisons **Rust**. La sûreté mémoire n'est pas une "feature", c'est une exigence architecturale qui élimine 70% des vulnérabilités (CVEs) à la compilation.
+- *L'approche R.A.I.S.E. :* C'est exactement pour cela que notre noyau est écrit en **Rust**. La sûreté mémoire n'est pas une "feature", c'est une exigence architecturale qui élimine 70% des vulnérabilités (CVEs) dès la compilation. De plus, notre dogme d'exclusion stricte de tout code de test en production garantit un binaire d'une pureté absolue.
 
 ### 2. Le Marquage CE Numérique
 
@@ -38,7 +38,7 @@ Il ne suffit plus de patcher après coup. Le fabricant doit prouver qu'il a int�
 
 Les fabricants devront signaler toute vulnérabilité activement exploitée à l'ENISA (Agence européenne de cybersécurité) dans un délai de **24 heures**.
 
-- _L'approche Condorcet :_ Notre journal d'audit immuable (Immutable Ledger) permet de tracer instantanément quel composant a failli, facilitant ce reporting légal.
+- *L'approche R.A.I.S.E. :* Notre architecture de données locale (`json_db`) repose sur un système de handles stricts et immuables. Ce registre d'intégrité permet de tracer instantanément quel composant a failli, facilitant ce reporting légal et garantissant l'auditabilité.
 
 ## Le Calendrier (La course contre la montre)
 
@@ -52,12 +52,12 @@ Bien que la loi soit votée, nous sommes dans une phase de transition critique :
 
 Le CRA a fait trembler la communauté Open Source. La version finale exempte les développeurs bénévoles, mais **toute entité commerciale** tirant profit d'un logiciel open-source (support, SaaS, features pro) est pleinement responsable.
 
-Si vous intégrez une librairie open-source dans votre produit industriel, **vous** êtes responsable de sa sécurité. C'est la fin de la confiance aveugle dans `npm install`.
+Si vous intégrez une librairie open-source dans votre produit industriel, **vous** êtes responsable de sa sécurité. C'est la fin de la confiance aveugle dans `npm install` ou les dépendances non auditées.
 
 ## Conclusion : Une opportunité de souveraineté
 
-Chez Condorcet Continuum, nous ne voyons pas le CRA comme une contrainte, mais comme une validation. L'Europe pose enfin les bases d'une informatique sérieuse, industrielle et souveraine.
+Avec l'infrastructure R.A.I.S.E., nous ne voyons pas le CRA comme une contrainte, mais comme une validation. L'Europe pose enfin les bases d'une informatique sérieuse, industrielle et souveraine.
 
-Les "boîtes noires" probabilistes ne passeront pas l'audit. Les architectures déterministes et prouvables, comme R.A.I.S.E., deviennent le nouveau standard de facto.
+L'ingénierie artisanale, le code non typé et les dépendances Cloud obscures ne passeront pas l'audit. Les architectures déterministes, prouvables et exécutables en zone étanche (Air-Gap) deviennent le nouveau standard de facto.
 
 **Préparez 2027 aujourd'hui.**

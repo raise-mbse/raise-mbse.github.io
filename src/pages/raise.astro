@@ -3,9 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const title = 'Le Moteur R.A.I.S.E.';
+const title = 'Le Moteur R.A.I.S.E. | Architecture et Noyau';
 const description =
-  'Rationalized Advanced Intelligence System Engine. Le standard industriel pour la décision critique.';
+  'Rationalized Advanced Intelligence System Engine. Le standard d\'infrastructure immuable pour les environnements industriels critiques.';
 ---
 
 <!doctype html>
@@ -19,13 +19,13 @@ const description =
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
       <div class="text-center mb-24 animate-fade-in">
         <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded border border-amber-200 bg-amber-50 text-amber-900 text-[10px] font-mono uppercase tracking-widest mb-6"
+          class="inline-flex items-center gap-2 px-3 py-1 rounded border border-blue-200 bg-blue-50 text-blue-900 text-[10px] font-mono uppercase tracking-widest mb-6"
         >
-          <span class="text-amber-600 animate-pulse">●</span> Standard de Gouvernance IA | Prototype v0.1.0
+          <span class="text-blue-600 animate-pulse">●</span> Noyau Industriel | Spécification v0.3.0
         </div>
 
         <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-8 tracking-tighter">
-          R.A.I.S.E.
+          L'Anatomie du Moteur R.A.I.S.E.
         </h1>
         <p
           class="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed mb-12"
@@ -34,29 +34,26 @@ const description =
           <strong class="text-slate-900">A</strong>dvanced
           <strong class="text-slate-900">I</strong>ntelligence
           <strong class="text-slate-900">S</strong>ystem
-          <strong class="text-slate-900">E</strong>ngine.
-          <br />
-          Plus qu'un logiciel, c'est le moteur de la décision rationnelle.
+          <strong class="text-slate-900">E</strong>ngine.<br />
+          Un châssis d'exécution déterministe conçu pour éliminer la dette technique et sécuriser la chaîne de valeur.
         </p>
 
         <div
-          class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl max-w-2xl mx-auto text-left flex gap-4 shadow-sm"
+          class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl max-w-2xl mx-auto text-left flex gap-4 shadow-sm"
         >
-          <div class="text-2xl pt-1">🚧</div>
+          <div class="text-2xl pt-1">🛡️</div>
           <div>
-            <h3 class="font-bold text-amber-900 text-sm uppercase tracking-wide mb-1">
-              Environnement de Validation
+            <h3 class="font-bold text-blue-900 text-sm uppercase tracking-wide mb-1">
+              Garantie d'Environnement Critique
             </h3>
-            <p class="text-sm text-amber-800/80 leading-snug">
-              Cette implémentation est un <strong>Prototype Fonctionnel</strong>. Elle sert à
-              valider les concepts d'architecture Neuro-Symbolique et de traçabilité avant le
-              lancement du <strong>MVP Industriel</strong> (v1.0).
+            <p class="text-sm text-blue-800/80 leading-snug">
+              Cette spécification décrit l'architecture de l'**Open Core**. Ce noyau immuable fournit les abstractions de bas niveau et les garanties d'intégrité de données nécessaires aux déploiements en zone étanche (Air-Gap).
             </p>
           </div>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-1 gap-8 mb-32 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 gap-8 mb-32 max-w-5xl mx-auto">
         <div
           class="flex flex-col md:flex-row gap-8 items-start bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-200 hover:border-rust/30 transition-all group"
         >
@@ -66,10 +63,9 @@ const description =
             R
           </div>
           <div>
-            <h2 class="text-2xl font-bold text-slate-900 mb-3">Rationalized (Rationalisation)</h2>
+            <h2 class="text-2xl font-bold text-slate-900 mb-3">Rationalized (Déterminisme Industriel)</h2>
             <p class="text-slate-600 mb-4 leading-relaxed">
-              Nous remplaçons le chaos probabiliste par la rationalité logique. Le système ne
-              "devine" pas, il déduit. Chaque output est le fruit d'un calcul déterministe.
+              Remplacement des comportements probabilistes instables par une logique formelle stricte. Chaque transaction et traitement au sein du modèle est exécuté de manière prévisible, aligné sur les exigences de l'Industrie 4.0.
             </p>
           </div>
         </div>
@@ -83,44 +79,9 @@ const description =
             A
           </div>
           <div>
-            <h2 class="text-2xl font-bold text-slate-900 mb-3">Advanced (Avant-Garde)</h2>
+            <h2 class="text-2xl font-bold text-slate-900 mb-3">Advanced (Sûreté Technologique)</h2>
             <p class="text-slate-600 mb-4 leading-relaxed">
-              L'état de l'art de l'ingénierie. Utilisation de <strong>Rust</strong> pour la sécurité mémoire
-              absolue et de <strong>WebAssembly</strong> pour l'isolation.
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="flex flex-col md:flex-row gap-8 items-start bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-200 hover:border-purple-500/30 transition-all group"
-        >
-          <div
-            class="shrink-0 w-20 h-20 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-4xl font-bold shadow-lg group-hover:bg-purple-600 transition-colors"
-          >
-            I
-          </div>
-          <div>
-            <h2 class="text-2xl font-bold text-slate-900 mb-3">Intelligence (Hybride)</h2>
-            <p class="text-slate-600 mb-4 leading-relaxed">
-              Le meilleur des deux mondes : <strong>Neuro</strong> (LEANN) pour percevoir la nuance du
-              réel, et <strong>Symbolique</strong> (SurrealDB) pour structurer le raisonnement.
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="flex flex-col md:flex-row gap-8 items-start bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-200 hover:border-green-500/30 transition-all group"
-        >
-          <div
-            class="shrink-0 w-20 h-20 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-4xl font-bold shadow-lg group-hover:bg-green-600 transition-colors"
-          >
-            S
-          </div>
-          <div>
-            <h2 class="text-2xl font-bold text-slate-900 mb-3">System (Souveraineté)</h2>
-            <p class="text-slate-600 mb-4 leading-relaxed">
-              Architecture "Local-First". Vos données ne quittent jamais votre infrastructure.
-              Indépendance totale vis-à-vis du Cloud.
+              Utilisation exclusive de <strong>Rust</strong> pour le noyau afin de garantir une sécurité mémoire absolue sans latence de nettoyage (Garbage Collector), combinée à <strong>WebAssembly</strong> pour l'isolation des extensions.
             </p>
           </div>
         </div>
@@ -131,91 +92,107 @@ const description =
           <div
             class="shrink-0 w-20 h-20 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-4xl font-bold shadow-lg group-hover:bg-orange-500 transition-colors"
           >
+            I
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-3">Intelligence (Cloisonnée par Schémas)</h2>
+            <p class="text-slate-600 mb-4 leading-relaxed">
+              L'intégration de la logique métier et des traitements complexes s'opère via des agents de données stricts. Ceux-ci exigent des arguments de schémas explicites, interdisant toute injection non vérifiée dans le système.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row gap-8 items-start bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-200 hover:border-purple-500/30 transition-all group"
+        >
+          <div
+            class="shrink-0 w-20 h-20 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-4xl font-bold shadow-lg group-hover:bg-purple-600 transition-colors"
+          >
+            S
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-3">System (Souveraineté Local-First)</h2>
+            <p class="text-slate-600 mb-4 leading-relaxed">
+              Indépendance totale vis-à-vis des infrastructures Cloud tierces. Le framework est conçu pour le déploiement sur site ou embarqué, garantissant que vos modèles de propriété intellectuelle ne quittent jamais votre périmètre de confiance.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row gap-8 items-start bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm border border-slate-200 hover:border-green-500/30 transition-all group"
+        >
+          <div
+            class="shrink-0 w-20 h-20 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-4xl font-bold shadow-lg group-hover:bg-green-600 transition-colors"
+          >
             E
           </div>
           <div>
-            <h2 class="text-2xl font-bold text-slate-900 mb-3">Engine (Exécutif)</h2>
+            <h2 class="text-2xl font-bold text-slate-900 mb-3">Engine (Performance du Contexte)</h2>
             <p class="text-slate-600 mb-4 leading-relaxed">
-              Le moteur d'exécution. Il applique le mandat du Médiateur, arbitre les conflits via
-              Condorcet et génère une trace d'audit.
+              Le moteur de commande intègre une gestion intelligente du contexte. À l'image de la CLI, le système utilise un mécanisme de basculement automatique vers la session courante si aucun paramètre explicite n'est forcé.
             </p>
           </div>
         </div>
       </div>
 
       <section class="mb-32">
-        <div
-          class="bg-slate-900 rounded-[3rem] p-8 md:p-16 relative overflow-hidden text-white shadow-2xl"
-        >
+        <div class="bg-slate-900 rounded-[3rem] p-8 md:p-16 relative overflow-hidden text-white shadow-2xl">
           <div
-            class="absolute inset-0 opacity-10"
+            class="absolute inset-0 opacity-5"
             style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"
           >
           </div>
 
           <div class="text-center mb-16 relative z-10">
-            <h2 class="text-3xl font-bold mb-4">L'Anatomie du Moteur</h2>
+            <h2 class="text-3xl font-bold mb-4">L'Architecture en Couches du Noyau</h2>
             <p class="text-slate-400 max-w-2xl mx-auto">
-              Une orchestration précise de modules indépendants. Chaque bloc remplit une fonction
-              cognitive spécifique.
+              Une isolation hermétique des responsabilités pour garantir l'auditabilité et la conformité industrielle.
             </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-            <div
-              class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 hover:border-blue-500/50 transition-colors"
-            >
-              <div
-                class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center text-2xl mb-6"
-              >
-                👁️
+            <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 hover:border-blue-500/50 transition-colors">
+              <div class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center text-2xl mb-6">
+                📦
               </div>
-              <h3 class="text-xl font-bold mb-2">1. Perception</h3>
+              <h3 class="text-xl font-bold mb-2">1. Persistance Locale</h3>
               <p class="text-sm text-slate-400 mb-4">
-                Ingestion et normalisation des flux (Capteurs, Documents, API).
+                Le module <code class="text-blue-300">json_db</code> stocke et indexe les documents de manière déterministe. Les relations logiques reposent sur des handles explicites pour écarter toute instabilité de clé.
               </p>
               <div class="bg-slate-900 p-3 rounded-lg text-xs font-mono text-blue-300">
-                > Input: Raw Data<br />
-                > Output: Tensors
+                > Index: B-Tree / Handles<br />
+                > Integrity: Schema Enforced
               </div>
             </div>
 
-            <div
-              class="bg-slate-800/80 p-8 rounded-3xl border border-rust/50 shadow-lg shadow-rust/10 relative transform md:-translate-y-4"
-            >
+            <div class="bg-slate-800/80 p-8 rounded-3xl border border-rust/50 shadow-lg shadow-rust/10 relative transform md:-translate-y-4">
               <div class="absolute top-0 right-0 p-2">
                 <span class="bg-rust text-white text-[10px] font-bold px-2 py-1 rounded">CORE</span>
               </div>
-              <div
-                class="w-12 h-12 bg-rust/20 text-rust rounded-xl flex items-center justify-center text-2xl mb-6"
-              >
+              <div class="w-12 h-12 bg-rust/20 text-rust rounded-xl flex items-center justify-center text-2xl mb-6">
                 ⚙️
               </div>
-              <h3 class="text-xl font-bold mb-2 text-white">2. Cognition</h3>
+              <h3 class="text-xl font-bold mb-2 text-white">2. Orchestration</h3>
               <p class="text-sm text-slate-300 mb-4">
-                Le cœur hybride. Confrontation des vecteurs (Mémoire) aux règles (Logique).
+                Le <code class="text-orange-400">kernel</code> asynchrone pilote les flux de travail sans blocage. Il implémente les règles métier du <code class="text-orange-400">rules_engine</code> sur un modèle d'exécution de graphe pur.
               </p>
               <div class="bg-slate-900 p-3 rounded-lg text-xs font-mono text-rust">
-                > Process: Neuro-Symbolic<br />
-                > Logic: Rust Native
+                > Mode: Pure Production Runtime<br />
+                > Debt: Zero Testing Artifacts
               </div>
             </div>
 
-            <div
-              class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 hover:border-green-500/50 transition-colors"
-            >
-              <div
-                class="w-12 h-12 bg-green-500/20 text-green-400 rounded-xl flex items-center justify-center text-2xl mb-6"
-              >
-                ⚖️
+            <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 hover:border-green-500/50 transition-colors">
+              <div class="w-12 h-12 bg-green-500/20 text-green-400 rounded-xl flex items-center justify-center text-2xl mb-6">
+                🧩
               </div>
-              <h3 class="text-xl font-bold mb-2">3. Décision</h3>
+              <h3 class="text-xl font-bold mb-2">3. Isolation Extensible</h3>
               <p class="text-sm text-slate-400 mb-4">
-                Arbitrage final via la méthode de Condorcet et génération de la preuve.
+                Sécurisation des briques externes via le runtime <code class="text-green-300">plugins</code> (Wasm). Les couches d'interface exposent des abstractions de schémas pour accueillir l'IP métier privée.
               </p>
               <div class="bg-slate-900 p-3 rounded-lg text-xs font-mono text-green-300">
-                > Method: Condorcet<br />
-                > Output: Signed Action
+                > Sandbox: WebAssembly Runtime<br />
+                > Abstraction: Pure Traits / APIs
               </div>
             </div>
           </div>
@@ -224,169 +201,97 @@ const description =
 
       <section class="mb-32">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-slate-900">Le Changement de Paradigme</h2>
-          <p class="text-slate-600 mt-4">Pourquoi R.A.I.S.E. est une rupture d'ingénierie.</p>
+          <h2 class="text-3xl font-bold text-slate-900">Le Changement de Paradigme Technique</h2>
+          <p class="text-slate-600 mt-4">Pourquoi l'infrastructure de R.A.I.S.E. redéfinit l'engagement de performance.</p>
         </div>
 
         <div class="overflow-hidden rounded-4xl border border-slate-200 shadow-xl">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-slate-900 text-white">
-                <th class="p-6 md:p-8 font-bold text-lg w-1/3">Critère</th>
-                <th
-                  class="p-6 md:p-8 font-bold text-lg w-1/3 text-slate-400 border-r border-slate-700"
-                  >Approche Standard (Python/AI)</th
-                >
-                <th class="p-6 md:p-8 font-bold text-lg w-1/3 text-rust bg-slate-800"
-                  >Approche R.A.I.S.E. (Rust)</th
-                >
+                <th class="p-6 md:p-8 font-bold text-lg w-1/3">Critère Architectural</th>
+                <th class="p-6 md:p-8 font-bold text-lg w-1/3 text-slate-400 border-r border-slate-700">Approche Standard (Python / Scripts)</th>
+                <th class="p-6 md:p-8 font-bold text-lg w-1/3 text-rust bg-slate-800">Approche R.A.I.S.E. (Rust Core)</th>
               </tr>
             </thead>
             <tbody class="bg-white">
               <tr class="border-b border-slate-100 hover:bg-slate-50">
                 <td class="p-6 font-bold text-slate-700">Gestion Mémoire</td>
-                <td class="p-6 text-slate-500 border-r border-slate-100"
-                  >Garbage Collector (Pauses imprévisibles)</td
-                >
-                <td class="p-6 text-slate-900 font-bold bg-orange-50/30"
-                  >Ownership (Déterministe & Safe)</td
-                >
+                <td class="p-6 text-slate-500 border-r border-slate-100">Garbage Collector ou allocation opaque (Pauses de runtime imprévisibles).</td>
+                <td class="p-6 text-slate-900 font-bold bg-orange-50/30">Modèle d'Ownership strict. Performance déterministe optimale pour calculs de modèles de grande échelle.</td>
               </tr>
               <tr class="border-b border-slate-100 hover:bg-slate-50">
-                <td class="p-6 font-bold text-slate-700">Gestion des Erreurs</td>
-                <td class="p-6 text-slate-500 border-r border-slate-100"
-                  >Exceptions (Try/Catch fragiles)</td
-                >
-                <td class="p-6 text-slate-900 font-bold bg-orange-50/30"
-                  >Result&lt;T, E&gt; (Strict)</td
-                >
+                <td class="p-6 font-bold text-slate-700">Sécurité des Données</td>
+                <td class="p-6 text-slate-500 border-r border-slate-100">Dépendances Cloud SaaS ou identifiants internes UUIDs exposés au réseau.</td>
+                <td class="p-6 text-slate-900 font-bold bg-orange-50/30">Persistance locale par handles explicites. Zéro fuite de métadonnées ou d'identifiants systèmes.</td>
               </tr>
               <tr class="border-b border-slate-100 hover:bg-slate-50">
-                <td class="p-6 font-bold text-slate-700">Performance</td>
-                <td class="p-6 text-slate-500 border-r border-slate-100"
-                  >Interprété (Lent sans C++ backend)</td
-                >
-                <td class="p-6 text-slate-900 font-bold bg-orange-50/30"
-                  >Native (Vitesse du C/C++)</td
-                >
+                <td class="p-6 font-bold text-slate-700">Pureté du Code</td>
+                <td class="p-6 text-slate-500 border-r border-slate-100">Conditions de test, mocks et artefacts de laboratoire fréquemment embarqués en production.</td>
+                <td class="p-6 text-slate-900 font-bold bg-orange-50/30">Dogme de la Forteresse : Tolérance zéro. Aucune condition de test n'altère l'arbre de syntaxe (AST) en production.</td>
               </tr>
               <tr class="border-b border-slate-100 hover:bg-slate-50">
-                <td class="p-6 font-bold text-slate-700">Déploiement</td>
-                <td class="p-6 text-slate-500 border-r border-slate-100"
-                  >"Dependency Hell" (pip, venv)</td
-                >
-                <td class="p-6 text-slate-900 font-bold bg-orange-50/30"
-                  >Binaire Unique (Standalone)</td
-                >
-              </tr>
-              <tr class="hover:bg-slate-50">
-                <td class="p-6 font-bold text-slate-700">Décision</td>
-                <td class="p-6 text-slate-500 border-r border-slate-100">Opaque (Boîte Noire)</td>
-                <td class="p-6 text-slate-900 font-bold bg-orange-50/30"
-                  >Auditable (Boîte de Verre)</td
-                >
+                <td class="p-6 font-bold text-slate-700">Déploiement en Zone Isolé</td>
+                <td class="p-6 text-slate-500 border-r border-slate-100">Gestion complexe de dépendances de paquets ("Dependency Hell") nécessitant un accès WAN.</td>
+                <td class="p-6 text-slate-900 font-bold bg-orange-50/30">Compilation en binaire unique autonome (Standalone). Prêt pour injection immédiate en environnement Air-Gap.</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
+
       <section class="mb-32 relative">
-        <div
-          class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-slate-200 hidden lg:block"
-        >
-        </div>
+        <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-slate-200 hidden lg:block"></div>
 
         <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-slate-900">Cartographie du Code Source</h2>
-          <p class="text-slate-500 mt-2">Projection directe de l'arborescence réelle du projet.</p>
+          <h2 class="text-3xl font-bold text-slate-900">Cartographie Réelle du Code Source</h2>
+          <p class="text-slate-500 mt-2">Distribution modulaire de l'écosystème R.A.I.S.E. au sein des dépôts officiels.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
           <div class="space-y-8">
             <div class="flex items-center gap-4 mb-4 lg:flex-row-reverse lg:text-right">
               <div>
-                <h3 class="text-xl font-bold text-blue-900">Presentation Layer</h3>
-                <p class="text-xs font-mono text-blue-500">React • TypeScript • Tauri</p>
+                <h3 class="text-xl font-bold text-blue-900">Interfaces Applicatives</h3>
+                <p class="text-xs font-mono text-blue-500">Tauri • CLI • Postes Industriels</p>
               </div>
-              <div
-                class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl"
-              >
+              <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl">
                 🖥️
               </div>
             </div>
 
-            <div
-              class="bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden group hover:border-blue-400 transition-colors"
-            >
-              <div
-                class="bg-slate-50 px-4 py-2 border-b border-slate-200 flex items-center gap-2 text-xs font-mono text-slate-500"
-              >
-                <span class="text-blue-500">📁</span> src/components/ai-chat
+            <div class="bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden group hover:border-blue-400 transition-colors">
+              <div class="bg-slate-50 px-4 py-2 border-b border-slate-200 flex items-center gap-2 text-xs font-mono text-slate-500">
+                <span class="text-blue-500">📁</span> raise-desktop / src-tauri
               </div>
               <div class="p-4 space-y-2">
                 <div class="flex items-center gap-2 text-sm text-slate-700">
-                  <span class="text-blue-400 text-xs">tsx</span>
-                  <span class="font-bold">ChatInterface.tsx</span>
-                  <span class="text-xs text-slate-400 ml-auto">UI Conversationnelle</span>
+                  <span class="text-blue-400 text-xs">rs</span>
+                  <span class="font-bold">main.rs</span>
+                  <span class="text-xs text-slate-400 ml-auto">Point d'entrée de l'application sécurisée</span>
                 </div>
                 <div class="flex items-center gap-2 text-sm text-slate-700">
-                  <span class="text-blue-400 text-xs">tsx</span>
-                  <span>IntentClassifier.tsx</span>
-                  <span class="text-xs text-slate-400 ml-auto">Détection d'intention</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-slate-700">
-                  <span class="text-blue-400 text-xs">tsx</span>
-                  <span>ContextDisplay.tsx</span>
-                  <span class="text-xs text-slate-400 ml-auto">Visualisation RAG</span>
+                  <span class="text-blue-400 text-xs">json</span>
+                  <span>tauri.conf.json</span>
+                  <span class="text-xs text-slate-400 ml-auto">Configuration d'isolation OS native</span>
                 </div>
               </div>
             </div>
 
-            <div
-              class="bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden group hover:border-blue-400 transition-colors"
-            >
-              <div
-                class="bg-slate-50 px-4 py-2 border-b border-slate-200 flex items-center gap-2 text-xs font-mono text-slate-500"
-              >
-                <span class="text-blue-500">📁</span> src/components/model-viewer
+            <div class="bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden group hover:border-blue-400 transition-colors">
+              <div class="bg-slate-50 px-4 py-2 border-b border-slate-200 flex items-center gap-2 text-xs font-mono text-slate-500">
+                <span class="text-blue-500">📁</span> raise-cli / src
               </div>
               <div class="p-4 space-y-2">
                 <div class="flex items-center gap-2 text-sm text-slate-700">
-                  <span class="text-blue-400 text-xs">tsx</span>
-                  <span class="font-bold">CapellaViewer.tsx</span>
-                  <span class="text-xs text-slate-400 ml-auto">Rendu MBSE</span>
+                  <span class="text-blue-400 text-xs">rs</span>
+                  <span class="font-bold">args.rs</span>
+                  <span class="text-xs text-slate-400 ml-auto">Analyseur de commandes et fallback contextuel</span>
                 </div>
                 <div class="flex items-center gap-2 text-sm text-slate-700">
-                  <span class="text-blue-400 text-xs">tsx</span>
-                  <span>ArcadiaLayerView.tsx</span>
-                  <span class="text-xs text-slate-400 ml-auto">Gestion des calques</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-slate-700">
-                  <span class="text-blue-400 text-xs">tsx</span>
-                  <span>DiagramRenderer.tsx</span>
-                  <span class="text-xs text-slate-400 ml-auto">Canvas Graphique</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden group hover:border-blue-400 transition-colors"
-            >
-              <div
-                class="bg-slate-50 px-4 py-2 border-b border-slate-200 flex items-center gap-2 text-xs font-mono text-slate-500"
-              >
-                <span class="text-blue-500">📁</span> src/features
-              </div>
-              <div class="p-4 space-y-2">
-                <div class="flex items-center gap-2 text-sm text-slate-700">
-                  <span class="text-orange-400 text-xs">dir</span>
-                  <span>hardware-engineering/</span>
-                  <span class="text-xs text-slate-400 ml-auto">PCB & Signals</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-slate-700">
-                  <span class="text-purple-400 text-xs">dir</span>
-                  <span>system-engineering/</span>
-                  <span class="text-xs text-slate-400 ml-auto">Requirements & Chains</span>
+                  <span class="text-blue-400 text-xs">rs</span>
+                  <span>pipeline.rs</span>
+                  <span class="text-xs text-slate-400 ml-auto">Orchestrateur DevSecOps automatique</span>
                 </div>
               </div>
             </div>
@@ -394,125 +299,78 @@ const description =
 
           <div class="space-y-8">
             <div class="flex items-center gap-4 mb-4">
-              <div
-                class="w-12 h-12 bg-rust/10 rounded-xl flex items-center justify-center text-2xl"
-              >
+              <div class="w-12 h-12 bg-rust/10 rounded-xl flex items-center justify-center text-2xl">
                 ⚙️
               </div>
               <div>
-                <h3 class="text-xl font-bold text-rust">Rust Backend</h3>
-                <p class="text-xs font-mono text-orange-600">Kernel • Logic • Storage</p>
+                <h3 class="text-xl font-bold text-rust">Noyau Rust (raise-core)</h3>
+                <p class="text-xs font-mono text-orange-600">Infrastructure • Architecture MBSE • Traçabilité</p>
               </div>
             </div>
 
-            <div
-              class="bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden group hover:border-rust transition-colors text-white relative"
-            >
+            <div class="bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden group hover:border-rust transition-colors text-white relative">
               <div class="absolute top-0 right-0 p-2">
-                <span class="bg-rust text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase"
-                  >Core Engine</span
-                >
+                <span class="bg-rust text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase">Infrastructure</span>
               </div>
-              <div
-                class="bg-slate-950 px-4 py-2 border-b border-slate-800 flex items-center gap-2 text-xs font-mono text-slate-400"
-              >
-                <span class="text-rust">📁</span> src/rust/json_db
+              <div class="bg-slate-950 px-4 py-2 border-b border-slate-800 flex items-center gap-2 text-xs font-mono text-slate-400">
+                <span class="text-rust">📁</span> src/json_db
               </div>
               <div class="p-4 space-y-2 font-mono text-xs">
                 <div class="flex items-center gap-2">
                   <span class="text-rust">rs</span>
-                  <span class="font-bold text-white">transactions/wal.rs</span>
-                  <span class="text-slate-500 ml-auto">Write-Ahead Logging</span>
+                  <span class="font-bold text-white">handles.rs</span>
+                  <span class="text-slate-500 ml-auto">Résolution déterministe d'intégrité</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <span class="text-rust">rs</span>
-                  <span>jsonld/processor.rs</span>
-                  <span class="text-slate-500 ml-auto">Semantic Graph</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="text-rust">rs</span>
-                  <span>indexes/btree.rs</span>
-                  <span class="text-slate-500 ml-auto">High-Perf Indexing</span>
+                  <span>storage/wal.rs</span>
+                  <span class="text-slate-500 ml-auto">Journalisation Write-Ahead (Résilience ACID)</span>
                 </div>
               </div>
             </div>
 
-            <div
-              class="bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden group hover:border-purple-500 transition-colors text-white"
-            >
-              <div
-                class="bg-slate-950 px-4 py-2 border-b border-slate-800 flex items-center gap-2 text-xs font-mono text-slate-400"
-              >
-                <span class="text-purple-500">📁</span> src/rust/ai
+            <div class="bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden group hover:border-purple-500 transition-colors text-white">
+              <div class="bg-slate-950 px-4 py-2 border-b border-slate-800 flex items-center gap-2 text-xs font-mono text-slate-400">
+                <span class="text-purple-500">📁</span> src/model_engine
               </div>
               <div class="p-4 space-y-2 font-mono text-xs">
                 <div class="flex items-center gap-2">
                   <span class="text-rust">rs</span>
-                  <span class="font-bold text-purple-300">agents/epbs_agent.rs</span>
-                  <span class="text-slate-500 ml-auto">System Architecture</span>
+                  <span class="font-bold text-purple-300">sysml.rs</span>
+                  <span class="text-slate-500 ml-auto">Structures pivots SysML v2 / MBSE 2.0</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <span class="text-rust">rs</span>
-                  <span>memory/qdrant_store.rs</span>
-                  <span class="text-slate-500 ml-auto">Vector Database</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="text-rust">rs</span>
-                  <span>nlp/embeddings/candle.rs</span>
-                  <span class="text-slate-500 ml-auto">Local Inference</span>
+                  <span>arcadia.rs</span>
+                  <span class="text-slate-500 ml-auto">Couplage d'architecture dirigée par les modèles</span>
                 </div>
               </div>
             </div>
 
-            <div
-              class="bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden group hover:border-green-500 transition-colors text-white"
-            >
-              <div
-                class="bg-slate-950 px-4 py-2 border-b border-slate-800 flex items-center gap-2 text-xs font-mono text-slate-400"
-              >
-                <span class="text-green-500">📁</span> src/rust/genetics
+            <div class="bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden group hover:border-green-500 transition-colors text-white">
+              <div class="bg-slate-950 px-4 py-2 border-b border-slate-800 flex items-center gap-2 text-xs font-mono text-slate-400">
+                <span class="text-green-500">📁</span> src/[ai/ agents/ stubs]
               </div>
               <div class="p-4 space-y-2 font-mono text-xs">
                 <div class="flex items-center gap-2">
                   <span class="text-rust">rs</span>
-                  <span class="font-bold text-green-300">genomes/arcadia_arch.rs</span>
-                  <span class="text-slate-500 ml-auto">Arch Optimization</span>
+                  <span class="font-bold text-green-300">traits.rs</span>
+                  <span class="text-slate-500 ml-auto">Contrats d'interface d'agent (Schémas explicites)</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <span class="text-rust">rs</span>
-                  <span>operators/crossover.rs</span>
-                  <span class="text-slate-500 ml-auto">Genetic Evolution</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden group hover:border-indigo-500 transition-colors text-white"
-            >
-              <div
-                class="bg-slate-950 px-4 py-2 border-b border-slate-800 flex items-center gap-2 text-xs font-mono text-slate-400"
-              >
-                <span class="text-indigo-500">📁</span> src/rust/traceability
-              </div>
-              <div class="p-4 space-y-2 font-mono text-xs">
-                <div class="flex items-center gap-2">
-                  <span class="text-rust">rs</span>
-                  <span class="font-bold text-indigo-300">compliance/eu_ai_act.rs</span>
-                  <span class="text-slate-500 ml-auto">Regulatory Checks</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="text-rust">rs</span>
-                  <span>compliance/iso_26262.rs</span>
-                  <span class="text-slate-500 ml-auto">Safety Standards</span>
+                  <span class="text-slate-400">mod.rs</span>
+                  <span class="text-slate-500 ml-auto">Points d'ancrage pour extensions métiers privées</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <div class="bg-slate-900 rounded-[3rem] p-12 text-center text-white relative overflow-hidden">
         <div
-          class="absolute inset-0 opacity-20"
+          class="absolute inset-0 opacity-10"
           style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 32px 32px;"
         >
         </div>
@@ -520,8 +378,7 @@ const description =
         <div class="relative z-10">
           <h2 class="text-3xl font-bold mb-6">Un Code Auditable par Design</h2>
           <p class="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Chaque module présenté ci-dessus est indépendant, typé strictement et testable. Pas de
-            boîte noire.
+            Chaque module composant l'Open Core est indépendant, typé de manière stricte et auditable sans boîte noire.
           </p>
           <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a
@@ -529,7 +386,7 @@ const description =
               target="_blank"
               class="bg-rust hover:bg-orange-700 text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg flex items-center gap-2 justify-center"
             >
-              <span>Voir le Repository</span>
+              <span>Vérifier le Dépôt GitHub</span>
               <span class="text-xl">↗</span>
             </a>
             <a

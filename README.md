@@ -1,82 +1,70 @@
-# Condorcet Continuum
+# 🚀 R.A.I.S.E. - Portail & Documentation Officielle
 
 <p align="center">
-  <img src="src/assets/logo-continuum.svg" width="150" height="150" alt="Logo Condorcet Continuum">
+  <img src="src/assets/logo-raise-emblem.svg" width="150" height="150" alt="Logo R.A.I.S.E.">
 </p>
 
-> **"Sous une loi libre, l'homme ignorant n'est qu'à moitié libre."** — Nicolas de Condorcet
-
-<p align="center">
-  <a href="https://github.com/condorcet-continuum/Condorcet-Continuum.github.io/actions/workflows/deploy.yml">
-    <img src="https://github.com/condorcet-continuum/Condorcet-Continuum.github.io/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status">
+> **"La maîtrise de la complexité exige une architecture déterministe, pas des approximations."** <p align="center">
+  <a href="https://github.com/Condorcet-Continuum/Condorcet-Continuum.github.io/actions/workflows/deploy.yml">
+    <img src="https://github.com/Condorcet-Continuum/Condorcet-Continuum.github.io/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status">
   </a>
   <img src="https://img.shields.io/badge/Built_with-Astro-orange?logo=astro" alt="Astro">
-  <img src="https://img.shields.io/badge/Powered_by-Rust-b7410e?logo=rust" alt="Rust">
+  <img src="https://img.shields.io/badge/Powered_by-Rust_Core-b7410e?logo=rust" alt="Rust Core">
   <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License">
 </p>
 
 ---
 
-## 🌐 Vision
+## 🌐 À Propos de ce Dépôt
 
-**Condorcet Continuum** est une initiative visant à restaurer la souveraineté cognitive humaine à l'ère des algorithmes opaques. Nous construisons une architecture logicielle "Local-First" qui assiste la prise de décision via la rationalité mathématique plutôt que par le profilage comportemental.
+Ce dépôt héberge le code source du portail public et du registre documentaire du **R.A.I.S.E. Open Core Framework** (*Rationalized Advanced Intelligence System Engine*). 
 
-Le projet fusionne l'héritage des **Mathématiques Sociales** (Méthode Condorcet) avec la **Sûreté Mémoire** moderne (Rust) et la **Traçabilité** (Blockchain).
+R.A.I.S.E. est une infrastructure logicielle "Local-First" conçue pour industrialiser l'ingénierie critique (MBSE 2.0, SysML v2, RAMI 4.0) et sécuriser les chaînes DevSecOps en environnement totalement étanche (Air-Gap).
 
-🔗 **Site Officiel :** [condorcet-continuum.github.io](https://condorcet-continuum.github.io/)
-
----
-
-## 🧠 Le Moteur R.A.I.S.E.
-
-Le cœur du système repose sur le concept **R.A.I.S.E.** (_Rationalized Advanced Intelligence System Engine_) :
-
-| Pilier           | Technologie        | Objectif                                      |
-| :--------------- | :----------------- | :-------------------------------------------- |
-| **Robustesse**   | 🦀 **Rust**        | Zéro crash, zéro fuite mémoire, typage fort.  |
-| **Rationalité**  | 📐 **Condorcet**   | Algorithmes de choix social sans biais.       |
-| **Souveraineté** | ⚡ **Tauri**       | Exécution locale. Vos données ne sortent pas. |
-| **Preuve**       | ⛓️ **Hyperledger** | Ancrage immuable des décisions critiques.     |
+🔗 **Consulter le Portail :** [condorcet-continuum.github.io](https://condorcet-continuum.github.io/)
 
 ---
 
-## 🛠️ Stack Technique (Site Web)
+## 🛠️ Stack Technique du Site Web
 
-Ce dépôt héberge le portail public et la documentation du projet. Il est conçu pour être rapide, accessible et écologique.
+La documentation est générée statiquement pour garantir des performances maximales, une sécurité absolue (aucune base de données exposée) et une empreinte carbone minimale.
 
-- **Framework :** [Astro 5.0](https://astro.build) (Architecture "Islands")
+- **Générateur de site :** [Astro 5.0](https://astro.build) (Architecture "Islands")
 - **Styling :** [Tailwind CSS v4](https://tailwindcss.com)
-- **Déploiement :** GitHub Actions & Pages
-- **Langage :** TypeScript / MDX
+- **Contenu :** Collections MDX / Markdown strict
+- **Déploiement :** Intégration Continue via GitHub Actions & Pages
 
 ---
 
-## 🚀 Installation & Développement
+## 🚀 Installation & Développement (Local)
 
-Pour cloner et lancer ce projet localement :
+Pour cloner et exécuter le portail documentaire sur votre poste de travail :
 
 ### Prérequis
 
 - Node.js v20+
-- npm
+- npm (ou pnpm / yarn)
 
-### Commandes
+### Lancement Rapide
 
 ```bash
-# 1. Cloner le dépôt
-git clone [https://github.com/condorcet-continuum/Condorcet-Continuum.github.io.git](https://github.com/condorcet-continuum/Condorcet-Continuum.github.io.git)
+# 1. Cloner le dépôt de documentation
+git clone [https://github.com/Condorcet-Continuum/Condorcet-Continuum.github.io.git](https://github.com/Condorcet-Continuum/Condorcet-Continuum.github.io.git)
 cd Condorcet-Continuum.github.io
 
-# 2. Installer les dépendances
+# 2. Installer les dépendances UI
 npm install
 
-# 3. Lancer le serveur de développement
+# 3. Lancer le serveur de développement local
 npm run dev
+
 ```
 
-Le site sera accessible sur `http://localhost:4321`.
+Le site et la documentation seront accessibles sur `http://localhost:4321`.
 
 ### Build de Production
+
+Pour générer les fichiers statiques de production :
 
 ```bash
 npm run build
@@ -85,44 +73,41 @@ npm run build
 
 ---
 
-## 📂 Structure du Projet
+## 📂 Topologie du Dépôt Documentaire
 
 ```text
 /
-├── public/           # Fichiers statiques (favicon, robots.txt)
+├── public/           # Fichiers statiques bruts (favicon, robots.txt)
 ├── src/
-│   ├── assets/       # Logos, SVG, Images
-│   ├── components/   # Composants UI (Header, Footer, BentoGrid)
-│   ├── content/      # Articles de Blog (Markdown/MDX) & Config
-│   ├── layouts/      # Mises en page (Base, BlogPost)
-│   └── pages/        # Routes (index, vision, architecture, raise)
-├── astro.config.mjs  # Configuration du compilateur
+│   ├── assets/       # Actifs visuels, diagrammes Mermaid et SVG industriels
+│   ├── components/   # Blocs d'interface réutilisables (Header, Footer, Layouts)
+│   ├── content/      # Registre d'architecture (Markdown) et schémas documentaires
+│   ├── layouts/      # Mises en page maîtres (Documentation, Base)
+│   └── pages/        # Routes applicatives (index, architecture, roadmap, use-cases)
+├── astro.config.mjs  # Configuration stricte du compilateur statique
 └── tailwind.config.mjs
 
 ```
 
 ---
 
-## 🤝 Contribuer
+## 🤝 Contribuer au Registre
 
-Les contributions sont ouvertes aux métiers, architectes, psychologues et sociologues.
-Pour proposer une modification sur le site ou la documentation :
+Les contributions documentaires sont ouvertes aux **Architectes d'Entreprise, Ingénieurs Système (MBSE) et experts DevSecOps**.
+
+Pour soumettre une correction de spécification ou un nouveau *Blueprint* d'architecture :
 
 1. Forkez le projet.
-2. Créez votre branche (`git checkout -b feature/AmazingFeature`).
-3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`).
-4. Pushez sur la branche (`git push origin feature/AmazingFeature`).
-5. Ouvrez une Pull Request.
+2. Créez une branche isolée (`git checkout -b doc/SysML-Integration`).
+3. Committez vos changements en respectant nos standards (`git commit -m 'docs: update SysML v2 parser specs'`).
+4. Pushez sur votre branche (`git push origin doc/SysML-Integration`).
+5. Ouvrez une Pull Request pour audit par les mainteneurs du Core.
 
 ---
 
 ## 📜 Licence
 
-Distribué sous la licence **Apache 2.0**. Voir `LICENSE` pour plus d'informations.
+L'ensemble de la documentation et du code de présentation est distribué sous la licence **Apache 2.0**. Voir le fichier `LICENSE` pour plus d'informations.
 
 ---
 
-<p align="center">
-<i>Forgé avec rationalité en Bretagne.</i>
-</p>
-````

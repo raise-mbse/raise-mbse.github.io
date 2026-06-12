@@ -3,132 +3,92 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const title = 'Bibliothèque de Mandats | R.A.I.S.E.';
+const title = "Topologies d'Architecture | R.A.I.S.E.";
 const description =
-  'Ne partez pas de zéro. Déployez des modèles de gouvernance pré-configurés pour votre industrie.';
+  "Blueprints d'intégration. Déployez le framework Open Core R.A.I.S.E. pour sécuriser vos environnements d'ingénierie critique.";
 
-// LES TEMPLATES (DONNÉES AVEC KPIs)
+// LES BLUEPRINTS (DONNÉES D'INFRASTRUCTURE AVEC KPIs)
 const templates = [
   {
-    id: 'ind-seveso',
-    category: 'INDUSTRIE LOURDE',
-    title: 'Directive Seveso (Haut-Risque)',
-    icon: '🏭',
+    id: 'arch-mbse',
+    category: 'AÉROSPATIAL (MBSE)',
+    title: 'Génération de Code Certifiable',
+    icon: '✈️',
     description:
-      'Configuration stricte pour sites classés. Priorité absolue à la sécurité humaine et environnementale sur la continuité de service.',
-    weights: [
-      { agent: 'Sécurité', value: 5.0, color: 'text-rust' },
-      { agent: 'Environnement', value: 4.0, color: 'text-green-600' },
-      { agent: 'Finance', value: 1.0, color: 'text-slate-400' },
+      "Automatisation de l'ingénierie dirigée par les modèles (SysML v2 / Arcadia). Transformation garantie sans perte d'intégrité vers du code source de production.",
+    modules: [
+      { name: 'model_engine', role: 'Abstraction SysML', color: 'text-rust' },
+      { name: 'code_generator', role: 'AST Builder', color: 'text-blue-500' },
+      { name: 'traceability', role: 'Audit DO-178C', color: 'text-slate-400' },
     ],
-    vetos: 12,
-    popularity: 'Top Téléchargement',
+    features: ['Tolérance Zéro (AST pur)', 'Handles stricts'],
+    popularity: 'Standard DO-178C',
     kpis: [
-      { label: 'Réaction', val: '< 50ms' },
-      { label: 'Faux Nég.', val: '0%' },
-      { label: 'Trace', val: '100%' },
+      { label: 'Test en Prod', val: '0' },
+      { label: 'Traçabilité', val: '100%' },
+      { label: 'Génération', val: '< 2s' },
     ],
   },
   {
-    id: 'fin-hft',
-    category: 'FINANCE DE MARCHÉ',
-    title: 'Trading Haute Fréquence',
-    icon: '💹',
-    description:
-      "Modèle optimisé pour la latence ultra-faible. Les agents de conformité (SEC/AMF) ont un droit de veto, mais l'exécution est prioritaire.",
-    weights: [
-      { agent: 'Performance', value: 4.5, color: 'text-blue-500' },
-      { agent: 'Conformité', value: 3.0, color: 'text-purple-500' },
-      { agent: 'Liquidité', value: 2.0, color: 'text-slate-400' },
-    ],
-    vetos: 5,
-    popularity: '',
-    kpis: [
-      { label: 'Latence', val: '< 10µs' },
-      { label: 'Tx/Sec', val: '> 50k' },
-      { label: 'Rejets', val: 'Auto' },
-    ],
-  },
-  {
-    id: 'def-cyber',
-    category: 'CYBER DÉFENSE',
-    title: 'Sentinelle OIV (Opérateur Vital)',
+    id: 'infra-devsecops',
+    category: 'DÉFENSE & SÉCURITÉ',
+    title: 'Pipeline DevSecOps Air-Gap',
     icon: '🛡️',
     description:
-      'Pour infrastructures critiques (Hôpitaux, Réseaux). Isolation réseau (Air-Gap) par défaut. Aucune sortie de donnée autorisée.',
-    weights: [
-      { agent: 'Confidentialité', value: 5.0, color: 'text-rust' },
-      { agent: 'Intégrité', value: 5.0, color: 'text-rust' },
-      { agent: 'Disponibilité', value: 2.0, color: 'text-slate-400' },
+      "Déploiement d'une chaîne CI/CD 100% déconnectée. Orchestration locale des builds, tests et livraisons sans aucune dépendance aux API Cloud.",
+    modules: [
+      { name: 'kernel', role: 'Orchestrateur Async', color: 'text-rust' },
+      { name: 'rules_engine', role: 'Validation Statique', color: 'text-purple-500' },
+      { name: 'raise-cli', role: 'Pilote Contextuel', color: 'text-slate-400' },
     ],
-    vetos: 24,
-    popularity: 'Recommandé ANSSI',
+    features: ['Fallback CLI auto', 'Zéro appel WAN'],
+    popularity: 'Recommandé OIV',
     kpis: [
-      { label: 'Fuite Data', val: '0 bit' },
-      { label: 'Faux Pos.', val: '< 0.1%' },
-      { label: 'Detect.', val: '< 1s' },
+      { label: 'Requêtes Sort.', val: '0 bit' },
+      { label: 'Disponibilité', val: '99.9%' },
+      { label: 'Latence', val: '< 50ms' },
     ],
   },
   {
-    id: 'log-jit',
-    category: 'LOGISTIQUE',
-    title: 'Just-in-Time Optimizer',
-    icon: '🚚',
+    id: 'ind-twin',
+    category: 'INDUSTRIE 4.0',
+    title: 'Jumeau Numérique Déterministe',
+    icon: '🏭',
     description:
-      'Équilibre subtil entre coût carburant et délai de livraison. Autorise les dépassements mineurs pour éviter les ruptures de chaîne.',
-    weights: [
-      { agent: 'Délai', value: 3.0, color: 'text-orange-500' },
-      { agent: 'Coût', value: 2.5, color: 'text-green-600' },
-      { agent: 'Qualité', value: 2.0, color: 'text-slate-400' },
+      "Gestion de l'état d'installations critiques (RAMI 4.0). Moteur de base de données locale interdisant les identifiants instables (UUID) au profit de handles explicites.",
+    modules: [
+      { name: 'json_db', role: 'Stockage ACID', color: 'text-rust' },
+      { name: 'spatial_engine', role: 'Topologie', color: 'text-orange-500' },
+      { name: 'plugins', role: 'Isolation Wasm', color: 'text-slate-400' },
     ],
-    vetos: 3,
+    features: ['Intégrité par Handles', 'Schémas Explicites'],
+    popularity: 'Conforme RAMI',
+    kpis: [
+      { label: 'Fuite UUID', val: '0' },
+      { label: 'Transactions', val: '> 10k/s' },
+      { label: 'Isolation', val: 'Wasm' },
+    ],
+  },
+  {
+    id: 'edge-tactical',
+    category: 'SYSTÈMES EMBARQUÉS',
+    title: 'Hyperviseur Edge Tactique',
+    icon: '📡',
+    description:
+      "Infrastructure allégée pour unités mobiles. Exécution de logique métier isolée dans des bacs à sable WebAssembly avec empreinte mémoire minimale.",
+    modules: [
+      { name: 'raise-edge', role: 'Runtime Allégé', color: 'text-rust' },
+      { name: 'plugins', role: 'Wasm Sandbox', color: 'text-green-600' },
+      { name: 'kernel', role: 'Micro-Orchestrateur', color: 'text-slate-400' },
+    ],
+    features: ['Mémoire No-GC', 'Isolation totale'],
     popularity: '',
     kpis: [
-      { label: 'Coûts', val: '-15%' },
-      { label: 'OTIF', val: '99%' },
-      { label: 'Recalcul', val: '200ms' },
+      { label: 'Cold Start', val: '< 10ms' },
+      { label: 'Empreinte', val: '< 15Mo' },
+      { label: 'Crash Rate', val: '0%' },
     ],
-  },
-  {
-    id: 'trans-rail',
-    category: 'TRANSPORT (SIMULATION)',
-    title: 'Gestion de Crise Ferroviaire',
-    icon: '🚄',
-    description:
-      "Arbitrage temps réel lors d'incidents de signalisation. Priorité absolue à la sécurité des passagers sur la fluidité du trafic.",
-    weights: [
-      { agent: 'Sécurité', value: 5.0, color: 'text-rust' },
-      { agent: 'Fluidité', value: 3.5, color: 'text-blue-500' },
-      { agent: 'Coût', value: 1.0, color: 'text-slate-400' },
-    ],
-    vetos: 42,
-    popularity: 'Standard SIL4',
-    kpis: [
-      { label: 'Accident', val: '0' },
-      { label: 'Retards', val: '-20%' },
-      { label: 'Reprise', val: '+30%' },
-    ],
-  },
-  {
-    id: 'def-tac',
-    category: 'DÉFENSE OPÉRATIONNELLE',
-    title: 'Engagement Tactique (SCCS)',
-    icon: '🎯',
-    description:
-      "Respect des Règles d'Engagement (ROE) pour systèmes autonomes. Tir bloqué physiquement si l'identification Cible < 99.9%.",
-    weights: [
-      { agent: 'ROE (Légal)', value: 5.0, color: 'text-rust' },
-      { agent: 'Mission', value: 3.0, color: 'text-blue-500' },
-      { agent: 'Survie', value: 2.0, color: 'text-slate-400' },
-    ],
-    vetos: 150,
-    popularity: 'Certifié OTAN (Sim)',
-    kpis: [
-      { label: 'ID Cible', val: '>99.9%' },
-      { label: 'Tir Ami', val: '0%' },
-      { label: 'Decision', val: '< 5ms' },
-    ],
-  },
+  }
 ];
 ---
 
@@ -143,40 +103,34 @@ const templates = [
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
       <div class="text-center mb-12 animate-fade-in">
         <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded border border-amber-200 bg-amber-50 text-amber-900 text-[10px] font-mono uppercase tracking-widest mb-6"
+          class="inline-flex items-center gap-2 px-3 py-1 rounded border border-blue-200 bg-blue-50 text-blue-900 text-[10px] font-mono uppercase tracking-widest mb-6"
         >
-          <span class="text-amber-600 animate-pulse">●</span> Standard de Gouvernance IA | Prototype v0.1.0
+          <span class="text-blue-600 animate-pulse">●</span> Standards d'Implémentation | Framework v0.3.0
         </div>
 
         <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6">
-          Bibliothèque de <span
-            class="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-rust">Mandats</span
-          >
+          Topologies <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-rust">Architecturales</span>
         </h1>
         <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-10">
-          Ne configurez pas l'IA à la main. Appliquez des topologies <strong
-            >Médiateur / Agents</strong
-          > certifiées pour votre industrie (Seveso, HFT, Cyber).
+          Ne réinventez pas l'infrastructure critique. Déployez nos <strong>Blueprints certifiés</strong> pour résoudre vos défis d'ingénierie de pointe (MBSE, DevSecOps, Edge).
         </p>
 
         <div
-          class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl max-w-3xl mx-auto text-left flex gap-4 shadow-sm"
+          class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl max-w-3xl mx-auto text-left flex gap-4 shadow-sm"
         >
-          <div class="text-2xl pt-1">🚧</div>
+          <div class="text-2xl pt-1">🏗️</div>
           <div>
-            <h3 class="font-bold text-amber-900 text-sm uppercase tracking-wide mb-1">
-              Projections &amp; Simulations
+            <h3 class="font-bold text-blue-900 text-sm uppercase tracking-wide mb-1">
+              Architecture Open Core
             </h3>
-            <p class="text-sm text-amber-800/80 leading-snug">
-              Les cas d'usage ci-dessous sont des <strong>exemples théoriques anonymisés</strong>.
-              Ils illustrent la capacité cible du moteur R.A.I.S.E. à résoudre des problèmes
-              industriels complexes une fois le <strong>MVP (v1.0)</strong> déployé en production.
+            <p class="text-sm text-blue-800/80 leading-snug">
+              Ces modèles de référence illustrent l'assemblage des modules du noyau <strong>raise-core</strong>. Ils fournissent le châssis sécurisé (Air-Gap) prêt à accueillir vos logiques métiers propriétaires via l'interface des plugins Wasm.
             </p>
           </div>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
         {
           templates.map((tpl) => (
             <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden flex flex-col">
@@ -205,7 +159,7 @@ const templates = [
                 {tpl.description}
               </p>
 
-              {/* BLOC KPIs */}
+              {/* BLOC KPIs INFRASTRUCTURE */}
               <div class="grid grid-cols-3 gap-2 mb-6 border-y border-slate-100 py-4">
                 {tpl.kpis.map((kpi) => (
                   <div class="text-center">
@@ -217,23 +171,23 @@ const templates = [
                 ))}
               </div>
 
-              {/* Visualisation des Poids (Mini Equalizer) */}
+              {/* Visualisation de la Stack (Crates utilisés) */}
               <div class="bg-slate-50 rounded-xl p-5 border border-slate-100 mb-8 grow">
                 <div class="text-xs font-bold text-slate-400 uppercase mb-3 flex justify-between">
-                  <span>Pondération (Vote)</span>
-                  <span>Priorité</span>
+                  <span>Modules Sollicités (Crates)</span>
+                  <span>Rôle</span>
                 </div>
                 <div class="space-y-3">
-                  {tpl.weights.map((w) => (
-                    <div class="flex items-center gap-3">
-                      <span class={`text-xs font-bold w-20 truncate ${w.color}`}>{w.agent}</span>
-                      <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
-                        <div
-                          class={`h-full rounded-full ${w.color.replace('text-', 'bg-')}`}
-                          style={`width: ${(w.value / 5) * 100}%`}
-                        />
-                      </div>
+                  {tpl.modules.map((m) => (
+                    <div class="flex items-center justify-between border-b border-slate-200/50 pb-2 last:border-0 last:pb-0">
+                      <span class={`text-xs font-mono font-bold ${m.color}`}>::{m.name}</span>
+                      <span class="text-xs text-slate-500">{m.role}</span>
                     </div>
+                  ))}
+                </div>
+                <div class="mt-4 pt-3 border-t border-slate-200/50 flex gap-2">
+                  {tpl.features.map((f) => (
+                     <span class="text-[9px] bg-slate-200 text-slate-600 px-2 py-1 rounded font-bold uppercase">{f}</span>
                   ))}
                 </div>
               </div>
@@ -241,11 +195,11 @@ const templates = [
               {/* Footer Carte */}
               <div class="flex items-center justify-between mt-auto">
                 <div class="flex items-center gap-2 text-xs text-slate-500">
-                  <span class="w-2 h-2 rounded-full bg-red-500" />
-                  <strong>{tpl.vetos}</strong> Vétos Actifs
+                  <span class="w-2 h-2 rounded-full bg-green-500" />
+                  <strong>Ready</strong> pour intégration IP
                 </div>
                 <button class="bg-slate-900 hover:bg-rust text-white text-xs font-bold py-2 px-4 rounded-lg transition-colors flex items-center gap-2 group">
-                  <span>Inspecter</span>
+                  <span>Voir Spécification</span>
                   <span class="group-hover:translate-x-1 transition-transform">→</span>
                 </button>
               </div>
@@ -260,15 +214,15 @@ const templates = [
         >
         </div>
         <div class="relative z-10">
-          <h2 class="text-3xl font-bold mb-4">Votre cas est unique ?</h2>
+          <h2 class="text-3xl font-bold mb-4">Besoin d'une topologie spécifique ?</h2>
           <p class="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Nos ingénieurs solutions peuvent modéliser votre "Topologie Décisionnelle" en 48h.
+            L'architecture modulaire de R.A.I.S.E. permet d'isoler n'importe quelle chaîne de valeur. Nos architectes peuvent concevoir votre Blueprint sur-mesure en 48h.
           </p>
           <a
             href="/contact"
             class="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-bold rounded-full hover:bg-slate-100 transition-colors"
           >
-            Demander un Audit Sur-Mesure
+            Demander une Étude Architecturale
           </a>
         </div>
       </div>

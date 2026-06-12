@@ -3,36 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const title = 'Programme Pilote | R.A.I.S.E.';
+const title = 'Programme Pilote Industriel | R.A.I.S.E.';
 const description =
-  "Devenez partenaire Early Adopter. Co-construisez la v1.0 et bénéficiez d'un accompagnement sur-mesure.";
-
-const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbzEJqLNKILLdCQo6GuQGrDhMPlkcZ2kWRFz58vkgysAA1-3YvLPT5GKOWE6Hp3Qib23/exec';
-
-const benefits = [
-  {
-    icon: '🚀',
-    title: 'Accès Anticipé (Early Access)',
-    desc: "Déployez le moteur Rust 6 mois avant la concurrence. Prenez une avance décisive sur l'automatisation souveraine.",
-  },
-  {
-    icon: '🛠️',
-    title: 'Co-Design de la Roadmap',
-    desc: 'Vos contraintes spécifiques (protocoles, formats) deviennent prioritaires dans notre backlog de développement.',
-  },
-  {
-    icon: '💎',
-    title: 'Pricing "Fondateur"',
-    desc: "Bénéficiez d'un tarif préférentiel verrouillé à vie (Lifetime Lock) en échange de vos retours techniques.",
-  },
-];
-
-const criteria = [
-  { label: 'Secteur', val: 'Industrie, Défense, Énergie ou Logistique Critique.' },
-  { label: 'Maturité', val: 'Equipes techniques familières avec Docker/Linux.' },
-  { label: 'Volume', val: 'Flux de données nécessitant une décision < 100ms.' },
-];
+  'Devenez partenaire pilote de l\'infrastructure Open Core R.A.I.S.E. Déployez et évaluez un châssis Local-First taillé pour l\'ingénierie critique.';
 ---
 
 <!doctype html>
@@ -44,250 +17,136 @@ const criteria = [
     <Header />
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-      <div class="text-center mb-16 animate-fade-in">
+      <div class="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
         <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded border border-amber-200 bg-amber-50 text-amber-900 text-[10px] font-mono uppercase tracking-widest mb-6"
+          class="inline-flex items-center gap-2 px-3 py-1 rounded border border-blue-200 bg-blue-50 text-blue-900 text-[10px] font-mono uppercase tracking-widest mb-6"
         >
-          <span class="text-amber-600 animate-pulse">●</span> Standard de Gouvernance IA | Prototype v0.1.0
+          <span class="text-blue-600 animate-pulse">●</span> Partenariat Technique | Évaluation Framework
         </div>
-
-        <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded border border-rust/30 bg-orange-50 text-rust text-[10px] font-mono uppercase tracking-widest mb-6"
-        >
-          <span class="relative flex h-2 w-2">
-            <span
-              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rust opacity-75"
-            ></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-rust"></span>
-          </span>
-          3 Slots Disponibles
-        </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6">
-          Devenez <span class="text-transparent bg-clip-text bg-linear-to-r from-rust to-orange-500"
-            >Partenaire Fondateur</span
-          >
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+          Rejoignez le Programme <span class="text-rust">Pilote Industriel</span>
         </h1>
-        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
-          Nous limitons l'accès au Kernel v1.0 à <strong>3 partenaires industriels</strong> pour garantir
-          un accompagnement "Gant Blanc".
+        <p class="text-lg text-slate-600 leading-relaxed">
+          N'attendez pas la généralisation des ruptures architecturales. Intégrez dès aujourd'hui le châssis d'infrastructure R.A.I.S.E. pour valider vos cas d'usage tactiques en environnement maîtrisé.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
-        <div class="lg:col-span-7">
-          <div
-            class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-slate-200 relative overflow-hidden"
-          >
-            <div
-              id="success-message"
-              class="hidden absolute inset-0 bg-white z-20 flex-col items-center justify-center text-center p-8 animate-fade-in"
-            >
-              <div
-                class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-4xl mb-6"
-              >
-                🚀
-              </div>
-              <h3 class="text-2xl font-bold text-slate-900 mb-2">Candidature Reçue !</h3>
-              <p class="text-slate-600 mb-8">
-                Merci pour votre intérêt. Nos ingénieurs vont analyser votre cas d'usage. Si vous
-                êtes éligible, vous recevrez une invitation sous 48h.
-              </p>
-              <a href="/" class="text-rust font-bold hover:underline">Retour à l'accueil</a>
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-rust/30 transition-all">
+          <div>
+            <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-2xl mb-6 text-rust">
+              🚀
             </div>
-
-            <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-              <span>🚀</span> Postuler au Programme
-            </h2>
-
-            <form id="pilot-form" class="space-y-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label for="nom" class="block text-xs font-bold text-slate-500 uppercase mb-2"
-                    >Nom complet</label
-                  >
-                  <input
-                    type="text"
-                    name="nom"
-                    id="nom"
-                    class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rust focus:ring-1 focus:ring-rust outline-none transition-all"
-                    placeholder="Jean Dupont"
-                    required
-                  />
-                </div>
-                <div>
-                  <label for="email" class="block text-xs font-bold text-slate-500 uppercase mb-2"
-                    >Email pro</label
-                  >
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rust focus:ring-1 focus:ring-rust outline-none transition-all"
-                    placeholder="jean@industrie.com"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label for="company" class="block text-xs font-bold text-slate-500 uppercase mb-2"
-                    >Entreprise</label
-                  >
-                  <input
-                    type="text"
-                    name="company"
-                    id="company"
-                    class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rust focus:ring-1 focus:ring-rust outline-none transition-all"
-                    placeholder="Nom de votre société"
-                    required
-                  />
-                </div>
-                <div>
-                  <label for="role" class="block text-xs font-bold text-slate-500 uppercase mb-2"
-                    >Fonction</label
-                  >
-                  <select
-                    name="role"
-                    id="role"
-                    class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rust focus:ring-1 focus:ring-rust outline-none transition-all"
-                  >
-                    <option value="CTO / DSI">CTO / DSI</option>
-                    <option value="Directeur Innovation">Directeur Innovation</option>
-                    <option value="Responsable Métier">Responsable Métier (Ops)</option>
-                    <option value="Architecte Système">Architecte Système</option>
-                    <option value="Autre">Autre</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label for="usecase" class="block text-xs font-bold text-slate-500 uppercase mb-2"
-                  >Description du Cas d'Usage</label
-                >
-                <textarea
-                  name="usecase"
-                  id="usecase"
-                  rows="4"
-                  class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-rust focus:ring-1 focus:ring-rust outline-none transition-all"
-                  placeholder="Ex: Analyse de 5000 PDF techniques..."
-                  required></textarea>
-              </div>
-
-              <div class="flex items-start gap-3 pt-2">
-                <input
-                  type="checkbox"
-                  name="nda_check"
-                  id="nda"
-                  class="mt-1 w-4 h-4 text-rust border-slate-300 rounded focus:ring-rust"
-                />
-                <label for="nda" class="text-sm text-slate-600">
-                  Nous aurons besoin d'un NDA (Accord de Confidentialité).
-                </label>
-              </div>
-
-              <button
-                id="submit-btn"
-                type="submit"
-                class="w-full bg-slate-900 hover:bg-rust text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
-              >
-                <span>Soumettre ma candidature</span>
-                <span class="group-hover:translate-x-1 transition-transform">→</span>
-              </button>
-
-              <p id="error-msg" class="hidden text-center text-red-500 text-sm mt-2">
-                Erreur lors de l'envoi. Veuillez réessayer.
-              </p>
-            </form>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">1. Accélération DevSecOps</h3>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              Évaluez l'impact du framework sur vos pipelines d'intégration continue en zone étanche. Testez la flexibilité du pilote <code class="text-rust">raise-cli</code> et son mécanisme de repli contextuel automatique vers la session active en l'absence de paramètres de domaine.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] font-mono text-slate-400">
+            Objectif : -65% de temps de validation
           </div>
         </div>
 
-        <div class="lg:col-span-5 space-y-8">
-          <div class="bg-slate-900 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-rust/20 rounded-full blur-[80px]"></div>
-            <h3 class="text-xl font-bold mb-6 relative z-10">Pourquoi ce programme ?</h3>
-            <ul class="space-y-6 relative z-10">
-              {
-                benefits.map((benefit) => (
-                  <li class="flex gap-4">
-                    <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0 border border-white/20 text-xl">
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <h4 class="font-bold text-rust text-sm uppercase">{benefit.title}</h4>
-                      <p class="text-sm text-slate-300 mt-1 leading-relaxed">{benefit.desc}</p>
-                    </div>
-                  </li>
-                ))
-              }
-            </ul>
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-blue-500/30 transition-all">
+          <div>
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-2xl mb-6 text-blue-600">
+              📐
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">2. Alignement MBSE 2.0</h3>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              Injectez vos spécifications SysML v2 ou vos modèles d'architecture Arcadia au sein du noyau déterministe. Validez la robustesse de la persistance locale par handles explicites et l'absence totale de dérive référentielle.
+            </p>
           </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] font-mono text-slate-400">
+            Objectif : Zéro rupture d'intégrité
+          </div>
+        </div>
 
-          <div class="bg-orange-50 p-8 rounded-3xl border border-rust/20">
-            <h3 class="text-lg font-bold text-slate-900 mb-4">Critères d'éligibilité</h3>
-            <ul class="space-y-4">
-              {
-                criteria.map((c) => (
-                  <li class="flex items-start gap-3">
-                    <div class="mt-1 w-4 h-4 rounded-full bg-rust flex items-center justify-center shrink-0 text-white text-[10px]">
-                      ✓
-                    </div>
-                    <div>
-                      <strong class="block text-slate-900 text-xs uppercase tracking-wide">
-                        {c.label}
-                      </strong>
-                      <span class="text-slate-600 text-sm">{c.val}</span>
-                    </div>
-                  </li>
-                ))
-              }
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-green-500/30 transition-all">
+          <div>
+            <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-2xl mb-6 text-green-600">
+              🔒
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">3. Cloisonnement d'IP</h3>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              Déployez vos solveurs métiers confidentiels ou vos algorithmes experts sous forme de modules isolés dans le bac à sable WebAssembly. Testez la sécurité de la boîte de verre face aux audits de certification les plus stricts.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] font-mono text-slate-400">
+            Objectif : Conforme DO-178C / SIL4
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-32 bg-slate-900 text-white rounded-[3rem] p-8 md:p-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+          <div>
+            <span class="text-xs font-mono text-rust uppercase tracking-widest block mb-2">Garantie de l'infrastructure Open Core</span>
+            <h2 class="text-3xl font-bold mb-6">Le Dogme de Pureté en Production</h2>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+              En rejoignant le programme pilote, vous bénéficiez d'un engagement de qualité logicielle absolu. Le code source du noyau de R.A.I.S.E. respecte une tolérance zéro à l'égard des artefacts de laboratoire.
+            </p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              <strong>Aucune condition de test n'altère le runtime de production.</strong> Le binaire unique livré en environnement autonome (Standalone) est exempt de tout échafaudage de simulation, éliminant nativement l'introduction de failles de sûreté mémoire.
+            </p>
+          </div>
+          <div class="bg-black/40 p-6 rounded-2xl border border-slate-800 font-mono text-xs text-slate-300">
+            <div class="text-slate-500 mb-2">// Engagement de Capacité R.A.I.S.E.</div>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Code source 100% Rust compilé</li>
+              <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Sandboxing WebAssembly des plugins</li>
+              <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Persistance json_db par handles stricts</li>
+              <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Arguments de schémas explicites obligatoires</li>
             </ul>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="max-w-2xl mx-auto bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-xl">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2 text-center">Formuler une demande d'accès</h2>
+        <p class="text-slate-500 text-xs text-center mb-8">Les accès au châssis Open Core v0.3.0 sont limités afin de garantir un accompagnement architectural sur-mesure.</p>
+        
+        <form action="#" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Nom / Prénom</label>
+              <input type="text" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:outline-none focus:border-rust" required />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Organisation / GBU Thales</label>
+              <input type="text" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:outline-none focus:border-rust" required />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Adresse email professionnelle</label>
+            <input type="email" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:outline-none focus:border-rust" required />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Topologie cible à évaluer</label>
+            <select class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:outline-none focus:border-rust text-slate-600">
+              <option>Pipeline DevSecOps Déconnecté (Air-Gap)</option>
+              <option>Génération de Code Source Certifiable (MBSE / SysML v2)</option>
+              <option>Jumeau Numérique Déterministe (RAMI 4.0)</option>
+              <option>Module Embarqué Tactique (raise-edge)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Description du contexte industriel</label>
+            <textarea rows="4" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm focus:outline-none focus:border-rust" placeholder="Précisez vos contraintes d'intégration système et d'engagement de performance..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-slate-900 hover:bg-rust text-white font-bold py-4 rounded-xl transition-all shadow-lg text-sm">
+            Soumettre ma candidature technique
+          </button>
+        </form>
+      </section>
     </main>
+
     <Footer />
-
-    <script define:vars={{ GOOGLE_SCRIPT_URL }}>
-      const form = document.getElementById('pilot-form');
-      const submitBtn = document.getElementById('submit-btn');
-      const successMsg = document.getElementById('success-message');
-      const errorMsg = document.getElementById('error-msg');
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        submitBtn.disabled = true;
-        submitBtn.querySelector('span').textContent = 'Envoi en cours...';
-        errorMsg.classList.add('hidden');
-
-        try {
-          // 1. On capture les données du formulaire
-          const formData = new FormData(form);
-
-          // 2. Gestion manuelle de la checkbox NDA
-          // (car une checkbox non cochée n'envoie rien)
-          formData.append('nda', form.querySelector('#nda').checked ? 'OUI' : 'NON');
-
-          // 3. Envoi simple via Fetch (Pas de JSON, on envoie le FormData direct)
-          await fetch(GOOGLE_SCRIPT_URL, {
-            method: 'POST',
-            body: formData,
-          });
-
-          // 4. Succès
-          form.classList.add('opacity-0');
-          setTimeout(() => {
-            successMsg.classList.remove('hidden');
-            successMsg.classList.add('flex');
-          }, 300);
-        } catch (err) {
-          console.error('Erreur:', err);
-          submitBtn.disabled = false;
-          submitBtn.querySelector('span').textContent = 'Soumettre ma candidature';
-          errorMsg.classList.remove('hidden');
-        }
-      });
-    </script>
   </body>
 </html>
