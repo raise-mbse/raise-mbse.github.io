@@ -34,7 +34,7 @@ R.A.I.S.E. est construit en **Rust** pour la performance, la sécurité mémoire
 
 ```bash
 # 1. Cloner le dépôt
-git clone [https://github.com/Condorcet-Continuum/raise.git](https://github.com/Condorcet-Continuum/raise.git)
+git clone [https://github.com/raise-mbse/raise.git](https://github.com/raise-mbse/raise.git)
 cd raise
 
 # 2. Installer les dépendances

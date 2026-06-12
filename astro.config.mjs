@@ -9,7 +9,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
-  site: 'https://condorcet-continuum.github.io',
+  site: 'https://raise-mbse.github.io',
 
   // 2. Configuration pour les fichiers .md (Documentation standard)
   markdown: {

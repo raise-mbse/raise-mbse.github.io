@@ -5,8 +5,8 @@
 </p>
 
 > **"La maîtrise de la complexité exige une architecture déterministe, pas des approximations."** <p align="center">
-  <a href="https://github.com/Condorcet-Continuum/Condorcet-Continuum.github.io/actions/workflows/deploy.yml">
-    <img src="https://github.com/Condorcet-Continuum/Condorcet-Continuum.github.io/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status">
+  <a href="https://github.com/raise-mbse/raise-mbse.github.io/actions/workflows/deploy.yml">
+    <img src="https://github.com/raise-mbse/raise-mbse.github.io/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status">
   </a>
   <img src="https://img.shields.io/badge/Built_with-Astro-orange?logo=astro" alt="Astro">
   <img src="https://img.shields.io/badge/Powered_by-Rust_Core-b7410e?logo=rust" alt="Rust Core">
@@ -23,7 +23,7 @@ Ce dépôt héberge le code source du portail public et du registre documentaire
 
 R.A.I.S.E. est une infrastructure logicielle "Local-First" conçue pour industrialiser l'ingénierie critique (MBSE 2.0, SysML v2, RAMI 4.0) et sécuriser les chaînes DevSecOps en environnement totalement étanche (Air-Gap).
 
-🔗 **Consulter le Portail :** [condorcet-continuum.github.io](https://condorcet-continuum.github.io/)
+🔗 **Consulter le Portail :** [raise-mbse.github.io](https://raise-mbse.github.io/)
 
 ---
 
@@ -51,8 +51,8 @@ Pour cloner et exécuter le portail documentaire sur votre poste de travail :
 
 ```bash
 # 1. Cloner le dépôt de documentation
-git clone [https://github.com/Condorcet-Continuum/Condorcet-Continuum.github.io.git](https://github.com/Condorcet-Continuum/Condorcet-Continuum.github.io.git)
-cd Condorcet-Continuum.github.io
+git clone [https://github.com/raise-mbse/raise-mbse.io.git](https://github.com/raise-mbse/raise-mbse.github.io.git)
+cd raise-mbse.github.io
 
 # 2. Installer les dépendances UI
 npm install
